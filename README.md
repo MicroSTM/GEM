@@ -2,7 +2,7 @@
 
 Code for the ICML 2022 paper: [*Discovering Generalizable Spatial Goal Representations via Graph-based Active Reward Learning*](https://www.tshu.io/GEM/GEM.pdf).  
 
-The code was written by the lead authors of the paper, Aviv Netanyahu and Tianmin Shu. For more details of the dataset, please visit our [*project website*](https://www.tshu.io/GEM).
+The code was written by the lead authors of the paper, Aviv Netanyahu and Tianmin Shu. For more details, please visit our [*project website*](https://www.tshu.io/GEM).
 
 The implementation is built on top of the framework in [*HumanCompatibleAI/imitation*](http://github.com/HumanCompatibleAI/imitation). 
 
