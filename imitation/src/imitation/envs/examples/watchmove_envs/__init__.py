@@ -13,8 +13,8 @@ def _register(env_name: str, entry_point: str, kwargs: Optional[dict] = None):
 
 
 # trapezoid agents, circle targget objects
-_register("WATCHMOVE-v3", entry_point="WATCHMOVE:WM")
-_register("WATCHMOVETest-v3", entry_point="WATCHMOVE:WM_test")
+_register("WATCHMOVE-v0", entry_point="watchmove:WM")
+_register("WATCHMOVETest-v0", entry_point="watchmove:WM_test")
 
 
 task_dir = "../output/tasks/"
@@ -24,7 +24,7 @@ for task_file in os.listdir(task_dir):
     if "nobj3" in task_file:
         _register(
             task_file[:-4] + "-v0",
-            entry_point="WATCHMOVE:WM",
+            entry_point="watchmove:WM",
             kwargs={
                 "G": data["G"],
                 "predicates": data["predicates"],
@@ -38,7 +38,7 @@ for task_file in os.listdir(task_dir):
     else:  # nobj4
         _register(
             task_file[:-4] + "-v0",
-            entry_point="WATCHMOVE:WM",
+            entry_point="watchmove:WM",
             kwargs={
                 "G": data["G"],
                 "predicates": data["predicates"],

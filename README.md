@@ -25,14 +25,14 @@ First, get into the `imitation/src/imitation/experiments` folder:
 cd imitation/src/imitation/experiments
 ```
 
-Then get into the generate task definitions for creating gym environments for Watch&Move tasks:
+Then generate the task definitions for creating gym environments of the Watch&Move tasks:
 ```
 bash generate_tasks.sh
 ```
 
-Download the expert demos from [*here*](https://www.tshu.io/expert_demos) and unzip in the `imitation/src/imitation/output` folder.
+Download the expert demos from [*here*](https://www.tshu.io/expert_demos) and unzip the file in the `imitation/src/imitation/output` folder.
 
-To run training and evaluation for each task, you may use the bash scripts in the `imitation/src/experiment` folder. For example, to run training for task 5, you may run the following commands.
+To run training and evaluation for each task, you may use the bash scripts in the `imitation/src/imitation/experiment` folder. For example, to run training for task 5, you may run the following commands.
 ```
 cd imitation/src/imitation/experiment
 bash task5.sh

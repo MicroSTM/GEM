@@ -208,6 +208,7 @@ def eval_policy(
     alpha,
     w_prev,
     beta,
+    num_recent_iters: int,
     num_transforms: int,
     only_add_transforms: bool,
     prev_reward: bool,
@@ -548,10 +549,14 @@ def eval_policy(
 
             curr_num_edges = int((1 - curr_goal.graph[:, :, 0]).sum() // 2)
             changed = False
-            if iter_id == 0 or (
-                curr_num_edges < prev_num_edges
-                or curr_num_edges == prev_num_edges
-                and cnt > 50
+            if (
+                iter_id == 0
+                or num_recent_iters == 0
+                or (
+                    curr_num_edges < prev_num_edges
+                    or curr_num_edges == prev_num_edges
+                    and cnt > num_recent_iters
+                )
             ):
                 cnt = 0
                 prev_goal = copy.deepcopy(curr_goal)

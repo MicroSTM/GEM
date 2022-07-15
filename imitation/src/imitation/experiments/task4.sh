@@ -2,7 +2,7 @@ BASE_DIR="../output"
 TASK_VERSION="-v0"
 GPU_DEVICE=0
 NOBJ=3
-TASK_ID=4
+TASK_ID=3
 TASK_BASE='nobj'$NOBJ'_taskid'
 TASK_NAME='train_'$TASK_BASE$TASK_ID$TASK_VERSION
 TEST_BASE='test_nobj'$NOBJ'_taskid'
@@ -15,7 +15,7 @@ CUDA_VISIBLE_DEVICES=$GPU_DEVICE python -m imitation.scripts.train_adversarial w
 rollout_path=$BASE_DIR/expert_demos/$TASK_NAME/expert_demos.pkl \
 log_dir=$BASE_DIR/GEM/$TASK_NAME/$seed \
 total_timesteps=500000 use_action=False use_graph=True \
-use_attention=False fc_G=True reward_type='GNN' expert_batch_size=8 policy_type='planner' \
+use_attention=False fc_G=True reward_type='GNN' expert_batch_size=22 policy_type='planner' \
 beta=0.3
 
 #Active reward learning

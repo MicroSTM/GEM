@@ -23,6 +23,7 @@ def replay_defaults():
     expert_batch_size = 16
 
     num_test_episodes = 1
+    num_recent_iters = 50
 
     normalize_state = False
     global_trans = True

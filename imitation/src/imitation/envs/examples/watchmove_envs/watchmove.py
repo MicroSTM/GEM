@@ -5575,7 +5575,7 @@ class WM(gym.Env):
             return self.get_subgoals_put(agent_id, goal2)
 
 
-class Maze_v4_test(Maze_v4):
+class WM_test(WM):
     def __init__(
         self,
         action_type="force",
